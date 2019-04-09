@@ -7,9 +7,11 @@ SVM kernel is used to take data as an input and transform it into the required f
 Linear Kernel                  
 Radial Basis Kernel
 Polynomial Kernel
-Sigmoid Kernel    
-    1. Linear Kernel                                                            Accuracy:        1.0
+Sigmoid Kernel
+
+      1. Linear Kernel                                                            Accuracy:        1.0
     It is useful when dealing with large sparse data vectors. It is often used in text categorization. The splines kernel also              performs well in regression problems. 
+   
       2. Polynomial Kernel                                           Accuracy:      0.9
     It is popular in image processing.
           
@@ -19,6 +21,11 @@ Sigmoid Kernel
       4. Sigmoid Kernel                                                 Accuracy:        0.75
     We can use it as the proxy for neural networks.   
            
+# Neural Networks
+Using keras, a MLP was designed to predict classes. OneHotEncoder was again used to convert labels to categories. 
 
+Only one hidden layer was used with ReLU activation and 21 neurons. Softmax was used in the final layer as this was a classification problem. Softmax is used because it's output for each neuron depends on the output of every other neuron in the layer, making it ideal for classification problems.
 
+Keras is used as it automatically performs back-propagation, without explicit coding. 
 
+The model showed 100% accuracy on both train and test set, with 95% k cross validation score.
